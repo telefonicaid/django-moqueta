@@ -63,7 +63,7 @@ Considerations:
 
 ### Customized views
 
-1. Create a view that inherits from `GeneralMockingView` in `views.py`:
+Create a view that inherits from `GeneralMockingView` in `views.py`:
 
 ```python
 from djangomoqueta.views import GeneralMockingView
@@ -77,7 +77,7 @@ def post(self, request):
     return response
 ```
 
-2. Add the view to `urls.py` file:
+Add the view to `urls.py` file:
 
 ```python
 urlpatterns = patterns('',
