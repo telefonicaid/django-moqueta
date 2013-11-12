@@ -121,7 +121,8 @@ class BookView(GeneralMockingView):
     	[...]
         extra = {'update_time': datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")}
         
-        return GeneralMockingView.generate_response_from_request(self, request, extra=extra)
+        return GeneralMockingView.generate_response_from_request(self, request, 
+        														 extra=extra)
 ```
 
 You can access to that information in your template by using `{{extra.<field>}}`.
@@ -135,10 +136,12 @@ class BooksView(GeneralMockingView):
 
     def post(self, request):
 		[...]
-        response = GeneralMockingView.generate_response_from_request(self, request, extra=extra)
+        response = GeneralMockingView.generate_response_from_request(self, request, 
+																	 extra=extra)
         
         [...]
-        response['Location'] = request.build_absolute_uri(reverse('Mocks-Book', args=(book_id,)))
+        response['Location'] = request.build_absolute_uri(reverse('Mocks-Book', 
+        												  args=(book_id,)))
         
         return response
 ```
