@@ -10,7 +10,7 @@ You can create a mock in an easy way just by creating a file in the template dir
 # Requirements
 
 * Python 2.7
-* Django 1.5
+* Django 1.4+
 
 # Installation
 
