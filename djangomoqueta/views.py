@@ -26,10 +26,10 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template.base import TemplateDoesNotExist
 from django.template.context import RequestContext
-from django.utils import simplejson
 from django.views.generic.base import View
 from string import lower
 from urlparse import urlparse
+import json
 
 
 class GeneralMockingView(View):
@@ -53,7 +53,7 @@ class GeneralMockingView(View):
 
     def __get_body(self, request):
         if 'application/json' in request.META['CONTENT_TYPE']:
-            body = simplejson.loads(request.body)
+            body = json.loads(request.body)
             return body
         return {}
 
