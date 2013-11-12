@@ -14,13 +14,13 @@ You can create a mock in an easy way just by creating a file in the template dir
 
 # Installation
 
-1. Install using `setup.py` (or just copy `djangomoqueta` application directory into your Django project):
+Install using `setup.py` (or just copy `djangomoqueta` application directory into your Django project):
 
 ```console
 $ python setup.py install
 ```
 
-2. Add `'djangomoqueta'` to your `INSTALLED_APPS` setting.
+Add `'djangomoqueta'` to your `INSTALLED_APPS` setting:
 
 ```python
 INSTALLED_APPS = (
@@ -30,7 +30,7 @@ INSTALLED_APPS = (
 )
 ```
   
-3. Include the `djangomoqueta` URLs to a path at the end of your `url.py` file:
+Include the `djangomoqueta` URLs to a path at the end of your `url.py` file:
 
 ```python	
 urlpatterns = patterns('',
